@@ -1,0 +1,33 @@
+# /etc/conf.d/kabberryd: config file for /etc/init.d/kabberryd
+
+# Config file location
+#BITCOIND_CONFIGFILE="/etc/kabberry/kabberry.conf"
+
+# What directory to write pidfile to?  (created and owned by $BITCOIND_USER)
+#BITCOIND_PIDDIR="/var/run/kabberryd"
+
+# What filename to give the pidfile
+#BITCOIND_PIDFILE="${BITCOIND_PIDDIR}/kabberryd.pid"
+
+# Where to write kabberryd data (be mindful that the blockchain is large)
+#BITCOIND_DATADIR="/var/lib/kabberryd"
+
+# User and group to own kabberryd process
+#BITCOIND_USER="kabberry"
+#BITCOIND_GROUP="kabberry"
+
+# Path to kabberryd executable
+#BITCOIND_BIN="/usr/bin/kabberryd"
+
+# Nice value to run kabberryd under
+#BITCOIND_NICE=0
+
+# Additional options (avoid -conf and -datadir, use flags above)
+#BITCOIND_OPTS=""
+
+# The timeout in seconds OpenRC will wait for bitcoind to terminate
+# after a SIGTERM has been raised.
+# Note that this will be mapped as argument to start-stop-daemon's
+# '--retry' option, which means you can specify a retry schedule
+# here. For more information see man 8 start-stop-daemon.
+BITCOIND_SIGTERM_TIMEOUT=60
